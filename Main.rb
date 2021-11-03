@@ -852,10 +852,6 @@ class People
   end
 end
 
-def task_244
-
-end
-
 
 #CG
 
@@ -984,32 +980,6 @@ def rpcls
   end
   puts commands[0].split(" ")[0]
   puts lose_str[commands[0].split(" ")[0].to_i].chop
-end
-
-def forest_fire
-  STDOUT.sync = true # DO NOT REMOVE
-  # Send your available units to put out those fires! Watch out for water supplies!
-
-  l = gets.to_i # Size of forest map
-  forest = Array.new(l){Array.new(l,0)}
-  water = gets.to_i # Total amount of water available
-  # game loop
-  loop do
-    n = gets.to_i # Amount of fires
-    n.times do
-      # fire_x: X coordinate of fire
-      # fire_y: Y coordinate of fire5
-      fire_x, fire_y = gets.split(" ").collect { |x| x.to_i }
-      forest[fire_y][fire_x] = 1
-
-
-    end
-    p forest
-    # Write an action using puts
-    # To debug: STDERR.puts "Debug messages..."
-
-    puts "" if n == 1
-  end
 end
 
 def batman
@@ -1234,17 +1204,5 @@ def rpn
   puts stack.join(" ")
 end
 
-module A
-  def a
-    puts "A"
-  end
-end
-class Test1
-  include(A)
-  def test
-    puts "hello"
-  end
-end
-test = Test1.new
-
+task_244
 
